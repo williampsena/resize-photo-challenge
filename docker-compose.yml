@@ -1,0 +1,38 @@
+version: '3'
+services:
+  mongodb:
+    container_name: "mongo-resize-photo-challenge"
+    build:
+      context: ./
+      dockerfile: Db.Dockerfile
+    ports:
+      - "5018:5018"
+    networks:
+      - resize-photo-challenge
+    restart: on-failure
+  mongodb-seed:
+    build:
+      context: ./
+      dockerfile: DbSeed.Dockerfile
+    depends_on:
+        - mongodb
+    links:
+      - mongodb:mongo-resize-photo-challenge
+    networks:
+      - resize-photo-challenge
+  web:
+    container_name: "resize-challenge"
+    build:
+      context: ./
+      dockerfile: App.Dockerfile
+    depends_on:
+        - mongodb
+    links:
+      - mongodb:mongo-resize-photo-challenge
+    ports:
+      - "3000:3000"
+    networks:
+      - resize-photo-challenge
+    restart: on-failure
+networks:
+  resize-photo-challenge:

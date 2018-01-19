@@ -1,0 +1,1 @@
+{"version":3,"file":"photo.schema.js","sourceRoot":"","sources":["../../../src/components/photo/photo.schema.ts"],"names":[],"mappings":";;AAAA,qCAAqC;AAExB,QAAA,WAAW,GAAG,IAAI,QAAQ,CAAC,MAAM,CAAC;IAC3C,GAAG,EAAE,MAAM;IACX,KAAK,EAAE,MAAM;IACb,GAAG,EAAE,MAAM;IACX,KAAK,EAAE,MAAM;IACb,MAAM,EAAE,MAAM;IACd,KAAK,EAAE,MAAM;CAChB,CAAC,CAAC"}

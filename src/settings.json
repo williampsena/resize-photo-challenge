@@ -1,0 +1,3 @@
+{
+    "database": "mongodb://localhost:5018/resize-photos-challenge"
+}
